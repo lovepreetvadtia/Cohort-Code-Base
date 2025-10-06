@@ -1,0 +1,145 @@
+@font-face {
+    font-family: wow;
+    src: url("Beltania.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top:35px;
+    padding-bottom: 20px;
+    height: 10%;
+    width:70% ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.sec1{
+background-color: rgb(58, 241, 196);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height:200px;
+color: rgb(0, 0, 0);
+}
+
+.sec1 h1{
+    font-family: wow;
+    font-size: 85px;
+    text-transform: capitalize;
+}
+
+.sec1 p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    font-style:italic;
+}
+
+.sec2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #01101f;
+}
+
+
+.sec2 h2{
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+.about{
+    background-color: rgb(187, 255, 232);
+    font-weight: 400;
+}
+
+.about>p{
+    text-align: center;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.education{
+    background-color: burlywood;
+}
+
+.education P{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 35px;
+    width: 65%;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.skills{
+    background-color: rgba(255, 127, 80, 0.959);
+}
+.skills P{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 35px;
+    width: 65%;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 900;
+
+}
+.projects{
+    background-color: rgb(21, 194, 247);
+}
+.projects p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 35px;
+    width: 65%;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.contact{
+    background-color: rgb(88, 98, 240);
+}
+.contact p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 35px;
+    width: 65%;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+
+@media (max-width:1200px){
+
+}

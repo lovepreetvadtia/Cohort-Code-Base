@@ -1,0 +1,529 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home / X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=globe_asia" />
+</head>
+
+<body class="bg-black text-white">
+  <main class=" container mx-auto flex">
+
+    <!-- Container 1 -->
+
+    <div class="container1 md:w-[75%]  w-[13] md:h-[80vh] sticky md:sticky top-0">
+      <div class="sidebar flex items-start  flex-col md:items-end ">
+        <ul class="flex flex-col text-[16px] space-y-1.5  w-[20] md:20 md:fixed">
+          <div class="logo pl-4 pb-2 pt-3 flex justify-start h-[45px] w-[50px] "><svg width="25" height="28" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" aria-hidden="true"
+              class="invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+              <g>
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                </path>
+              </g>
+            </svg></div>
+
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900 font-bold">
+            <img src="components/home.svg" alt=""><span class="ml-[10px] hidden md:block">Home</span>
+          </li>
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900 ">
+            <svg class="invert" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+              fill="#1f1f1f">
+              <path
+                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+            </svg> <span class="ml-[10px] hidden md:block">Explore</span>
+          </li>
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900  ">
+            <svg class="invert" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#1f1f1f">
+              <path
+                d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+            </svg> <span class="ml-[10px] hidden md:block">Notifications</span>
+          </li>
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg class="invert" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#1f1f1f">
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+            </svg> <span class="ml-[10px] hidden md:block">Messeges</span>
+          </li>
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 32" aria-hidden="true"
+              class="invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+              <g>
+                <path
+                  d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                </path>
+              </g>
+            </svg> <span class="ml-[10px] hidden md:block">Grok</span>
+          </li>
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900 ">
+            <svg height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"
+              class="invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+              <g>
+                <path
+                  d="M7.501 19.917L7.471 21H.472l.029-1.027c.184-6.618 3.736-8.977 7-8.977.963 0 1.95.212 2.87.672-.444.478-.851 1.03-1.212 1.656-.507-.204-1.054-.329-1.658-.329-2.767 0-4.57 2.223-4.938 6.004H7.56c-.023.302-.05.599-.059.917zm15.998.056L23.528 21H9.472l.029-1.027c.184-6.618 3.736-8.977 7-8.977s6.816 2.358 7 8.977zM21.437 19c-.367-3.781-2.17-6.004-4.938-6.004s-4.57 2.223-4.938 6.004h9.875zm-4.938-9c-.799 0-1.527-.279-2.116-.73-.836-.64-1.384-1.638-1.384-2.77 0-1.93 1.567-3.5 3.5-3.5s3.5 1.57 3.5 3.5c0 1.132-.548 2.13-1.384 2.77-.589.451-1.317.73-2.116.73zm-1.5-3.5c0 .827.673 1.5 1.5 1.5s1.5-.673 1.5-1.5-.673-1.5-1.5-1.5-1.5.673-1.5 1.5zM7.5 3C9.433 3 11 4.57 11 6.5S9.433 10 7.5 10 4 8.43 4 6.5 5.567 3 7.5 3zm0 2C6.673 5 6 5.673 6 6.5S6.673 8 7.5 8 9 7.327 9 6.5 8.327 5 7.5 5z">
+                </path>
+              </g>
+            </svg> <span class="ml-[10px] hidden md:block">Communities</span>
+          </li>
+          <!-- <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg class="invert" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#1f1f1f">
+              <path
+                d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+            </svg> <span class="ml-[10px] hidden md:block">Bookmarks</span>
+          </li>  -->
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+              class="invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+              <g>
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                </path>
+              </g>
+            </svg> <span class="ml-[10px] hidden md:block">Premium</span>
+          </li>
+          <li class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"
+              class="invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-1q142lx r-1kihuf0 r-1472mwg r-di8nfa r-lrsllp"
+              data-testid="icon">
+              <g>
+                <path
+                  d="M7.323 2h11.443l-3 5h6.648L6.586 22.83 7.847 14H2.523l4.8-12zm1.354 2l-3.2 8h4.676l-.739 5.17L17.586 9h-5.352l3-5H8.677z">
+                </path>
+              </g>
+            </svg> <span class="ml-[10px] hidden md:block">Verified Orgs</span>
+          </li>
+          <li
+            class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg class="invert" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#1f1f1f">
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+            </svg> <span class="ml-[10px] hidden md:block">Profile</span>
+          </li>
+          <li
+            class="flex items-center justify-items-start  w-fit px-3 py-1.5 hover:cursor-pointer   hover:border-0 hover:rounded-full hover:font-bold hover:bg-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path
+                d="M280-420q25 0 42.5-17.5T340-480q0-25-17.5-42.5T280-540q-25 0-42.5 17.5T220-480q0 25 17.5 42.5T280-420Zm200 0q25 0 42.5-17.5T540-480q0-25-17.5-42.5T480-540q-25 0-42.5 17.5T420-480q0 25 17.5 42.5T480-420Zm200 0q25 0 42.5-17.5T740-480q0-25-17.5-42.5T680-540q-25 0-42.5 17.5T620-480q0 25 17.5 42.5T680-420ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+            </svg> <span class="ml-[10px] hidden md:block">More</span>
+          </li>
+          
+          <div
+          class="hidden md:block md:w-42 w-9.5 ml-2 text-[15px] py-2 mr-4 rounded-full bg-white text-black flex  mt-4 font-bold ]">
+          <button class="pl-18">Post</button> </div>
+          <button class="md:hidden md:block ml-2 mt-2 h-8 w-8 bg-[#1d9be6] flex items-center justify-center rounded-full">
+          <span class="md:hidden md:block">
+  <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF"><path d="M167-120q-21 5-36.5-10.5T120-167l40-191 198 198-191 40Zm191-40L160-358l458-458q23-23 57-23t57 23l84 84q23 23 23 57t-23 57L358-160Zm317-600L261-346l85 85 414-414-85-85Z"/></svg>
+</span></button>
+          
+          <div class="profile flex mt-10 mb-4 mx-4 justify-start">
+            <div><img class="  justify-start rounded-full hidden md:block" height="30" width="30" src="components/Jeo-baiden.jpg" alt="profile pic"></div>
+            <div class="name ml-2 w-30 hidden md:block ">
+              <p class="text-[12px] font-bold hover:underline hover:cursor-pointer">Ariana Krasniqi</p>
+              <p class="text-[12px] text-gray-600 ">@arianakra</p>
+            </div>
+            <button class="text-[22px] hidden md:block">...</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Container 2 -->
+
+
+    <div class="container2 w-full border border-x-gray-500 border-y-black h-[80%]">
+      <div class="top flex justify-around text-[13px] font-bold  sticky top-0 h-11 bg-black backdrop-blur-lg opacity-90">
+        <div class="absolute w-16 h-0.5 bg-blue-500 bottom-0 left-[18.5%] z-10 rounded-s-full"></div>
+        <div class="right w-1/2 h-[100%] flex justify-center py-3.5 text-[12px] hover:bg-slate-900">For You</div>
+        <div class="left w-1/2 h-[100%] flex justify-center py-3.5 text-[12px] hover:bg-slate-900">Following</div>
+      </div>
+      <div class="h-[1px] w-full bg-gray-700  sticky top-11 "></div>
+      <div class="whathappen flex flex-col">
+        <div class="firstdiv flex px-[15px] py-[12px] mt-2">
+          <img class="rounded-full h-[32px] w-[32px]" src="components/lavi.jpg" alt="">
+          <div>
+            <input
+              class="ml-2.5 text-[16px] border-none outline-none ring-0 focus:ring-0 focus:outline-none bg-black text-white"
+              type="text" placeholder="What’s happening?">
+          </div>
+        </div>
+
+        <div class="seconddiv flex mx-4 my-2 mb-3 justify-between">
+          <div class="flex invert text-blue-500 justify-between gap-2.5 px-2 mx-5">
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img src="components/gallery.svg" alt="">
+            </div>
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img height="20" width="20" src="components/gif.svg" alt="">
+            </div>
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img height="20" width="20" src="components/grok.svg" alt="">
+            </div>
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img height="20" width="20" src="components/poll.svg" alt="">
+            </div>
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img height="20" width="20" src="components/smile.svg" alt="">
+            </div>
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img height="20" width="20" src="components/schedule.svg" alt="">
+            </div>
+            <div
+              class="h-[24px] w-[24px] hover:bg-gray-200 hover:cursor-pointer  rounded-full items-center justify-center px-1 py-1">
+              <img height="20" width="20" src="components/location.svg" alt="">
+            </div>
+          </div>
+          <div class="px-4 py-1 bg-white text-black rounded-4xl text-[12px] font-bold"><button
+              class="border-none outline-none">Post</button></div>
+        </div>
+      </div>
+      <div class="h-[0.5px] w-full bg-gray-700  "></div> <!--Border Line-->
+      <div class="flex items-center justify-center text-[12px] py-3 text-[#1d9be6] cursor-pointer">Show 29 Posts</div>
+      <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+      <div class="post my-4 ">
+        <div class="profile flex  mx-4 ">
+          <img class="h-7 w-7 rounded-full "
+            src="https://pbs.twimg.com/profile_images/1593688242771017728/1Ocz0cvu_400x400.jpg" alt="">
+          <span class=" font-bold text-[12px] mb-2 pl-1">Shyam Sankar</span>
+          <span class="text-gray-500 text-[12px] pl-2"> @ssankar·Jul 21</span>
+        </div>
+        <div class=" pl-6 font-bold">🇺🇸 vs 🇪🇺</div>
+        <div class="flex items-center justify-center">
+          <img class="my-2  mx-3 h-100 w-90 rounded-[14px]"
+            src="https://pbs.twimg.com/media/GwYtd_tWQAAqYSp?format=jpg&name=large" alt="">
+        </div>
+        <div class="icons flex items-center justify-around opacity-70 my-3">
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Comment.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/share.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/Like.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bar.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/bookmark.svg" alt=""></div>
+          <div class="hover:bg-gray-800 px-1 py-1 hover:cursor-pointer rounded-full"><img height="20" width="20"
+              src="components/shareee.svg" alt=""></div>
+        </div>
+        <div class="h-[1px] w-full bg-gray-700  "></div> <!--Border Line-->
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- Container 3 -->
+
+    <div class="container3 w-[100%] hidden md:block h-[90vh]">
+      <div class="relative">
+        <div class="fixed search pt-1.5 pl-3
+          bg-black w-full h-[48px]">
+          <input type="text" class="rounded-full w-75 text-white bg-black px-8 py-2 border  border-gray-500"
+            placeholder="Search">
+        </div>
+      </div>
+      <div class="sticky top-[10vh] mt-16 flex flex-col premieum rounded-2xl w-75 text-white bg-black p-[12px] h-34 border m-2.5 border-gray-500 ">
+        <span class="font-bold text-[16px] mb-1">Subscribe to Premium</span>
+        <span class="text-[12px]">Subscribe to unlock new features and if eligible, receive a share of revenue.</span>
+        <span
+          class="text-[12px] px-[16px]  rounded-2xl mt-2 py-2 text-white font-bold bg-blue-400 hover:bg-blue-500 hover:cursor-pointer w-22">Subscribe</span>
+      </div>
+      <div class="whatshappen sticky top-[34vh] rounded-2xl w-75 text-white bg-black px-3 py-3 border  border-gray-500 m-2.5 h-fit">
+        <span class=" text-[18px] font-bold">What’s happening</span>
+        <div class="grid grid-cols-[1fr_2fr] mt-[15px]">
+          <img class="h-[75px] w-[75px] rounded-2xl " src="components/nftimg.jpg" alt="">
+          <div>
+            <p class="text-[14px] font-bold">NFL Top 100 Countdown</p>
+            <span class="text-[13px] text-gray-700">LIVE</span>
+          </div>
+        </div>
+        <div class="trends mt-[12px]">
+          <p class="text-[13px] w-[100%] text-nowrap pt-3 text-gray-600">Trending in India</p>
+          <p class="text-[16px] font-bold">#JusticeForSchoolsChildren</p>
+          <p class="text-[13px] text-gray-600 mb-[15px]"> 679K posts</p>
+        </div>
+
+        <div class="trends mt-[12px]">
+          <p class="text-[13px] w-[100%] text-nowrap pt-3 text-gray-600">Entertainment · Trending</p>
+          <p class="text-[16px] font-bold">#SaraArjun</p>
+          <p class="text-[13px] text-gray-600 mb-[15px]">1,751 posts</p>
+        </div>
+
+        <div class="trends mt-[12px]">
+          <p class="text-[13px] w-[100%] text-nowrap pt-3 text-gray-600">Only on X · Trending</p>
+          <p class="text-[16px] font-bold">#Muharram</p>
+          <p class="text-[13px] text-gray-600"> 10.9K posts</p>
+        </div>
+        <div class="text-[13px] text-blue-500 hover:cursor-pointer pt-4">Show More</div>
+
+      </div>
+
+      <div class="what-to-follow sticky top-[100vh] rounded-2xl w-75 text-white bg-black px-3 py-3 border  border-gray-500 m-2.5 h-fit">
+        <p class="font-bold text-[18px]">What to follow</p>
+        <div class="profile flex mt-4 mb-4">
+          <img class="rounded-full" height="40" width="40" src="components/Artane Rizvanolli.jpg" alt="profile pic">
+          <div class="name flex flex-col ml-2 w-35">
+            <p class="text-[12px] font-bold hover:underline hover:cursor-pointer">Artane Rizvanolli</p>
+            <p class="text-[12px] text-gray-600 ">@Artane_R</p>
+          </div>
+          <button
+            class="w-[70px] h-[25px] text-[12px] rounded-2xl text-black font-bold bg-white hover:bg-gray-200 hover:cursor-pointer justify-center mt-1.5  ">Follow</button>
+        </div>
+
+        <div class="profile flex mt-4 mb-4">
+          <img class="rounded-full" height="40" width="40" src="components/Jeo-baiden.jpg" alt="profile pic">
+          <div class="name flex flex-col ml-2 w-35">
+            <p class="text-[12px] font-bold hover:underline hover:cursor-pointer">Ariana Krasniqi</p>
+            <p class="text-[12px] text-gray-600 ">@arianakra</p>
+          </div>
+          <button
+            class="w-[70px] h-[25px] text-[12px] rounded-2xl text-black font-bold bg-white hover:bg-gray-200 hover:cursor-pointer justify-center mt-1.5  ">Follow</button>
+        </div>
+
+
+        <div class="profile flex mt-4 mb-4 ">
+          <img class="rounded-full" height="40" width="40" src="components/jassi.jpg" alt="profile pic">
+          <div class="name flex flex-col ml-2 w-35">
+            <p class="text-[12px] font-bold hover:underline hover:cursor-pointer">Jassi</p>
+            <p class="text-[12px] text-gray-600 ">@JJassiOfficial</p>
+          </div>
+          <button
+            class="w-[70px] h-[25px] text-[12px] rounded-2xl text-black font-bold bg-white hover:bg-gray-200 hover:cursor-pointer justify-center mt-1.5  ">Follow</button>
+        </div>
+
+        <div class="text-[13px] text-blue-500 hover:cursor-pointer">Show More</div>
+      </div>
+
+      <footer class="sticky top-[90%] text-[10px] hidden md:block bg-black text-gray-400 text-sm py-4 px-6 w-95">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="#" class="hover:underline">Cookie Policy</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="#" class="hover:underline">Accessibility</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="#" class="hover:underline">Ads info</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="#" class="hover:underline">More ...</a>
+          <span class="text-gray-500">© 2025 X Corp.</span>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+</body>
+
+</html>

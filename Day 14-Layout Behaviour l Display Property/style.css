@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "apple";
+    src: url(./SFPRODISPLAYREGULAR.OTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-family: apple;
+  background-color: black;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+}
+
+li{
+    color: #9b9a9a;
+        list-style: none;
+        font-size: 13px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+li:hover{
+    transition: 0.3s;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+}
+
+i{
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #131313;
+    height: 44px;
+    width: 100%;
+    gap: 2.8%;
+    opacity: 90%;
+}
+.hero1{
+    background: url(./iphone17.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+
+}
+.hero{
+    height: 95vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.hero h2{
+    font-size: 56px;
+    padding-top: 6%;
+    font-weight: 600;
+}
+
+.hero h4{
+    font-weight: 200;
+    font-size: 30px;
+    padding-bottom: 23px;
+    text-align: center;
+}
+
+.hero #button1{
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    background: #0077ED;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.hero #button2{
+    margin-left: 10px;
+    color: #0077ED;
+    font-size: 17px;
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid #0077ED;
+    padding: 12px 24px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+#button2:hover{
+    color: white;
+    background: #0077ED;
+
+}
+
+.strip{
+    width: 100%;
+    height: 12px;
+    background-color: white;
+}
+
+.hero2{
+    background: url(https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_large.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero2 h2{
+    color: black;
+}
+
+.hero2 h4{
+color: black;
+
+}

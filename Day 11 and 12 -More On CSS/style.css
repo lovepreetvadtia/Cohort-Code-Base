@@ -1,0 +1,53 @@
+@font-face {
+    font-family: f1;
+    src: url(./Baby\ Donuts.ttf);
+}
+
+@font-face {
+        font-family: f2;
+    src: url(./Warm\ Winter.ttf);
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    background: url(./Cat.png);
+    background-size: cover;
+    background-position:center;
+}
+
+h1{
+    font-family: f1;
+    font-size:100px;
+    color: #16040c;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 32px;
+}
+
+button{
+    width: 30%;
+    font-family: f2;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    font-size: 30px;   
+    /* border: 2px solid #161B21; */
+    border-radius: 50px;
+    font-weight: 500;
+    margin-left: 36%;   
+    margin-top: 25%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
