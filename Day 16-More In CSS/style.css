@@ -344,8 +344,8 @@ input:focus {
 }
 
 .card{
-    height: 220px;
     width: 280px;
+    height: 220px;
     border-radius: 14px;
     position: relative;
     transition: all ease 0.5s;
