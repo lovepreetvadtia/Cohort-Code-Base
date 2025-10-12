@@ -344,8 +344,8 @@ input:focus {
 }
 
 .card{
-    height: 250px;
-    width: 320px;
+    height: 220px;
+    width: 280px;
     border-radius: 14px;
     position: relative;
     transition: all ease 0.5s;
@@ -389,12 +389,12 @@ input:focus {
 }
 
 .ico i{
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     border-radius: 50%;
     color: black;
     background-color: white;
-    padding: 14px;
+    padding: 12px;
 }
 
 .card:hover .btm{
