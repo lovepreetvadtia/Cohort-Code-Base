@@ -344,8 +344,8 @@ input:focus {
 }
 
 .card{
-    width: 280px;
-    height: 220px;
+    width: 240px;
+    height: 175px;
     border-radius: 14px;
     position: relative;
     transition: all ease 0.5s;
@@ -380,14 +380,19 @@ input:focus {
     align-items: center;
 }
 
+
 .btm p{
     width: 200px;
     font-size: 18px;
     font-weight: 600;
-    text-overflow: ellipsis;
     padding-left: 10px;
 }
 
+.ico{
+    display: flex;
+    gap: 8px;
+    padding-right: 6px;
+}
 .ico i{
     font-size: 12px;
     font-weight: 600;
