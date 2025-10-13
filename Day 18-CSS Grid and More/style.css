@@ -1,0 +1,260 @@
+@font-face {
+    font-family: MyFont;
+    src: url(./Mona-Sans.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+#main{
+    background-color: white;
+    font-family: MyFont;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 15% 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    grid-template-areas: "nav nav nav" 
+                        "sec1 sec2 sec2" 
+                       "sec1 footer2 footer3";
+    grid-gap: 12px;
+    padding: 18px;
+}
+
+nav{
+    grid-area: nav;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.nav1{
+    display: flex;
+}
+
+.nav1 i{
+    font-size: 18px;
+    color: #645e8e;
+    padding-right: 7px;
+}
+
+.nav2 ul{
+    display: flex;
+    gap: 17px;
+    font-size: 14px;
+}
+
+.nav3{
+    display: flex;
+}
+
+.nav3 button{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: MyFont;
+    background-color: transparent;
+    border: none;
+}
+
+.nav3 i{
+    color: black;
+    background-color: #bcd4fd;
+    padding: 12px;
+    margin-left: 7px;
+    border-radius: 50%;
+}
+
+.nav3 .navbtn2{
+    color: white;
+    background-color: #2c3041;
+    padding: 14px 7px 14px 16px;
+    border-radius: 24px;
+    margin-left: 10px;
+}
+
+
+.sec1{
+    grid-area: sec1;
+    background-color:white;
+}
+.sec2{
+    grid-area: sec2;
+    background-color: aliceblue;
+    width: 680px;
+    height: 350px;
+    
+}
+
+.sec2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 24px;
+}
+
+.footer2{
+    border-radius: 24px;
+    grid-area: footer2;
+    background-color: coral;
+    width: 335px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footer2 img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 24px;
+}
+
+
+.footer3{
+    grid-area: footer3;
+    width: 335px;
+    height: 350px;
+}
+
+.footer3 img{
+    border-radius: 24px;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footer1{
+    grid-area: sec1;
+    background-color: white;
+    grid-template-columns: minmax(499px, 1fr);
+    margin-right: 16px;
+}
+
+.footer1 .navbtn2{
+    width: fit-content;
+    color: white;
+    background-color: #2c3041;
+    padding: 14px 7px 14px 16px;
+    border-radius: 24px;
+    margin-left: 10px;
+}
+
+.footer1 i{
+    color: black;
+    background-color: #bcd4fd;
+    padding: 12px;
+    margin-left: 7px;
+    border-radius: 50%;
+}
+
+.footer1 .ftbtn2{
+   width: 166px;
+    height: 51px;
+    border-radius: 24px;
+    margin-left: 10px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://i.pinimg.com/736x/a9/83/38/a983388ca4dd425be11b5c3a0e43f7d6.jpg);
+}
+
+.footer1 .ftbtn3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width: 195px;
+    height: 51px;
+    padding-right: 12px;
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    border: 1.5px solid black;
+    margin-right: 35px;
+    transition: all ease 0.5s;
+}
+
+.ftbtn3 i{
+    color: black;
+    background-color: transparent;
+}
+
+.ftbtn3:hover{
+    background-color: black;
+    color: white;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.ftbtn3:hover i{
+    color: white;
+}
+
+.footer1 span{
+    font-size: 75px;
+    font-weight: 400;
+    display: inline;
+}
+
+.btn{
+    display: inline-block;
+}
+
+.bttn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ttn{
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ttn i{
+    color: white;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.ttn p{
+    margin-left: 16px;
+    text-decoration: underline;
+}
+
+.partner{
+    font-size: 30px;
+    display: flex;
+gap: 25px;
+    align-items: center;
+}
+
+.footer1>p{
+    padding-bottom: 28px;
+    width: 75%;
+    font-size: 14px;
+    padding-top: 100px;
+    color: black;
+}
