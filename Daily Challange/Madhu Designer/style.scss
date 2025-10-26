@@ -1,0 +1,88 @@
+@font-face {
+    font-family: f1;
+    src: url(./Bartkey-8M0YA.otf);
+}
+@font-face {
+    font-family: f2;
+    src: url(./Hexaplex.otf);
+}
+@font-face {
+    font-family: f3;
+    src: url(./PaluiSPDemo-Bold.otf);
+}
+@font-face {
+    font-family: f4;
+    src: url(./PLAYER_ONE.otf);
+}
+@mixin flex-center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+main{
+    margin: 3rem;
+    font-family: f4;
+    color: white;
+        background-color: black;}
+
+    .section1{ 
+        nav{
+            @include flex-center();
+            justify-content: space-between;
+        }
+        p{
+            font-size: 2rem;
+
+        i{
+            font-size: 0.5rem;
+            color: orange;}}
+
+            .circle{
+                padding: 0.7rem;
+                width: fit-content;
+                align-items: center;
+                border-radius: 50%;
+                border: 2px solid white;
+                display: grid;
+                grid-template-columns: 10px 10px;
+                grid-template-rows: 10px 10px;
+                grid-template-areas: "10 10"
+                "10 10"; 
+                grid-gap: 5px;
+                i{
+                    font-weight: 200;
+                    color: white;
+                }  
+                p{
+                    font-size: 0.3rem;
+                }
+
+            }
+
+            .btn{
+                button{
+                   font-family: f1;
+                   border-radius: .6rem;
+                       padding: 0.7rem 1.2rem;
+                       color: white;
+                       border:2px solid white;
+                       outline: none;
+                       font-size:1rem ;
+                       background: transparent;         
+                   }
+            }
+        }
+    
