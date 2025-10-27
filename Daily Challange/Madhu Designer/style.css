@@ -1,18 +1,6 @@
 @font-face {
-  font-family: f1;
-  src: url(./Bartkey-8M0YA.otf);
-}
-@font-face {
   font-family: f2;
   src: url(./Hexaplex.otf);
-}
-@font-face {
-  font-family: f3;
-  src: url(./PaluiSPDemo-Bold.otf);
-}
-@font-face {
-  font-family: f4;
-  src: url(./PLAYER_ONE.otf);
 }
 * {
   margin: 0;
@@ -23,30 +11,31 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #111111;
 }
 
 main {
-  margin: 3rem;
-  font-family: f4;
+  margin: 2rem;
+  font-family: f2;
   color: white;
-  background-color: black;
+  background-color: #111111;
 }
-
-.section1 nav {
+main nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0;
   justify-content: space-between;
 }
-.section1 p {
+main nav p {
   font-size: 2rem;
+  font-weight: 600;
 }
-.section1 p i {
+main nav p i {
   font-size: 0.5rem;
   color: orange;
 }
-.section1 .circle {
+main nav .circle {
   padding: 0.7rem;
   width: -moz-fit-content;
   width: fit-content;
@@ -59,15 +48,15 @@ main {
   grid-template-areas: "10 10" "10 10";
   grid-gap: 5px;
 }
-.section1 .circle i {
+main nav .circle i {
   font-weight: 200;
   color: white;
 }
-.section1 .circle p {
+main nav .circle p {
   font-size: 0.3rem;
 }
-.section1 .btn button {
-  font-family: f1;
+main nav .btn button {
+  font-family: f2;
   border-radius: 0.6rem;
   padding: 0.7rem 1.2rem;
   color: white;
@@ -75,4 +64,90 @@ main {
   outline: none;
   font-size: 1rem;
   background: transparent;
+}
+main .section1 {
+  background-color: #222121;
+  padding: 2rem;
+  padding-bottom: 0px;
+  border-radius: 20px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 1rem;
+}
+main .section1 .bottom {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+main .section1 .bottom .img image {
+  width: 556px;
+}
+main .section1 .bottom .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 5rem;
+}
+main .section1 .bottom .txt .up {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section1 .bottom .txt .up p {
+  font-size: 2.5rem;
+}
+main .section1 .bottom .txt .up i {
+  font-size: 1rem;
+}
+main .section1 .bottom .txt .down {
+  display: flex;
+  justify-content: center;
+}
+main .section1 .bottom .txt .down p {
+  text-align: center;
+}
+main .section1 .top {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .section1 .top .work {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+main .section1 .top .work p {
+  font-size: 1rem;
+  font-weight: 100;
+}
+main .section1 .top .work i {
+  color: orange;
+  font-size: 0.5rem;
+}
+main .section1 .top .Big .mid {
+  font-size: 6.3rem;
+}
+main .section1 .top .Big .short {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgba(207, 207, 207, 0.733);
+}
+main .section1 .top .btm p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  width: 90%;
+  text-transform: uppercase;
+  color: rgb(204, 204, 204);
+}
+main .section1 .top .btm i {
+  font-size: 4rem;
+  color: rgba(247, 148, 0, 0.555);
 }/*# sourceMappingURL=style.css.map */

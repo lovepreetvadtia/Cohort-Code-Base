@@ -1,23 +1,13 @@
 @font-face {
-    font-family: f1;
-    src: url(./Bartkey-8M0YA.otf);
-}
-@font-face {
     font-family: f2;
     src: url(./Hexaplex.otf);
 }
-@font-face {
-    font-family: f3;
-    src: url(./PaluiSPDemo-Bold.otf);
-}
-@font-face {
-    font-family: f4;
-    src: url(./PLAYER_ONE.otf);
-}
-@mixin flex-center(){
+
+@mixin flex-center($gap:0){
     display: flex;
     align-items: center;
     justify-content: center;
+    gap:$gap;
 }
 
 * {
@@ -29,60 +19,147 @@
 html,body {
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #111111;
 }
 
 main{
-    margin: 3rem;
-    font-family: f4;
+    
+    margin: 2rem;
+    font-family: f2;
     color: white;
-        background-color: black;}
+    background-color: #111111;
 
-    .section1{ 
-        nav{
-            @include flex-center();
-            justify-content: space-between;
-        }
+    nav{
+        @include flex-center();
+        justify-content: space-between;
         p{
-            font-size: 2rem;
+        font-size: 2rem;
+        font-weight: 600;
 
         i{
-            font-size: 0.5rem;
-            color: orange;}}
+        font-size: 0.5rem;
+        color: orange;}}
 
-            .circle{
-                padding: 0.7rem;
-                width: fit-content;
-                align-items: center;
-                border-radius: 50%;
-                border: 2px solid white;
-                display: grid;
-                grid-template-columns: 10px 10px;
-                grid-template-rows: 10px 10px;
-                grid-template-areas: "10 10"
-                "10 10"; 
-                grid-gap: 5px;
-                i{
-                    font-weight: 200;
-                    color: white;
-                }  
-                p{
-                    font-size: 0.3rem;
-                }
+        .circle{
+            padding: 0.7rem;
+            width: fit-content;
+            align-items: center;
+            border-radius: 50%;
+            border: 2px solid white;
+            display: grid;
+            grid-template-columns: 10px 10px;
+            grid-template-rows: 10px 10px;
+            grid-template-areas: "10 10"
+            "10 10"; 
+            grid-gap: 5px;
 
+            i{
+                font-weight: 200;
+                color: white;
+            }  
+
+            p{
+                font-size: 0.3rem;
+            }
             }
 
             .btn{
                 button{
-                   font-family: f1;
-                   border-radius: .6rem;
-                       padding: 0.7rem 1.2rem;
-                       color: white;
-                       border:2px solid white;
-                       outline: none;
-                       font-size:1rem ;
-                       background: transparent;         
-                   }
+                font-family: f2;
+                border-radius: .6rem;
+                padding: 0.7rem 1.2rem;
+                color: white;
+                border:2px solid white;
+                outline: none;
+                font-size:1rem ;
+                background: transparent;         
             }
         }
-    
+    }
+    .section1{
+        background-color: #222121;
+        padding: 2rem;
+        padding-bottom: 0px;
+        border-radius: 20px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 1rem;
+        .bottom{
+             width: 50%;
+             display: flex;
+            justify-content: flex-end;
+             .img{
+                image{
+                    width: 556px;
+                }
+             }
+            .txt{
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding-bottom: 5rem;
+                .up{
+                    display: flex;
+                    gap: 0.5rem;
+                    p{
+                        font-size: 2.5rem;
+                    }
+                    i{
+                        font-size: 1rem;
+                    }
+                }
+                .down{
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .top{
+            width: 50%;
+            @include flex-center(1.5rem);
+            flex-direction: column;
+            align-items: flex-start;
+            .work{
+               @include flex-center(0.5rem);
+               justify-content: flex-start;
+                p{
+                    font-size: 1rem;
+                    font-weight: 100;
+                }
+                i{
+                    color: orange;
+                    font-size: 0.5rem;
+                }
+            }
+            .Big{
+                .mid{
+                    font-size: 6.3rem;
+                }
+                .short{
+                    font-size: 1.5rem;
+                    font-weight: 100;
+                    color: rgba(207, 207, 207, 0.733);
+                }
+            }
+            .btm{
+                p{
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 1rem;
+                    width: 90%;
+                    text-transform: uppercase;
+                    color: rgb(204, 204, 204);
+                }
+                i{
+                    font-size: 4rem;
+                    color: rgba(247, 148, 0, 0.555);
+                }
+            }
+        }
+    }
+}
