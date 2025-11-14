@@ -1,0 +1,61 @@
+🧩 Level 1 – Beginner Function Practice
+1. Write a function that prints "Hello JavaScript". 
+Hint: Use function greet(){ console.log("Hello JavaScript"); }
+
+2. Create a function that takes one name and prints “Hello ”. 
+Hint: Use parameter inside console.log() with template string.
+
+3. Make a function that adds two numbers and returns the result. 
+Hint: Use return a + b; and log it.
+
+4. Write a function with 3 parameters where one has a default value. 
+Hint: Example — function add(a,b=5,c){ ... }
+
+5. Create a function that squares any number passed as argument. 
+Hint: Return num * num.
+
+6. Make a function that checks if a number is even or odd. 
+Hint: Use % 2 and return "Even"/"Odd".
+
+7. Create a function expression (store function in a variable). 
+Hint: const greet = function(){...} instead of function declaration.
+
+8. Write a function that returns the largest of two numbers. 
+Hint: Use conditional or ternary operator.
+
+9. Make a nested function — one function inside another — and call the inner one. 
+Hint: Inner function should be defined and called within the outer function.
+
+10. Write a function that returns the factorial of a number. 
+Hint: Use loop or recursion to multiply descending numbers.
+
+⚡ Level 2 – Slightly Tougher but Logical Function Practice
+11. Demonstrate function hoisting by calling a function before its definition. 
+Hint: Only works with normal function declarations, not arrow or expressions.
+
+12. Write an Immediately Invoked Function Expression (IIFE) that prints “I run instantly”. 
+Hint: Wrap in (function(){ ... })();
+
+13. Create an arrow function that multiplies two numbers. 
+Hint: const mul = (a,b) => a*b;
+
+14. Write a callback function example where one function runs after another. 
+Hint: Pass a function as argument and call it inside the main function.
+
+15. Create a higher order function that accepts another function and a number, then calls it. 
+Hint: Example — function higher(fn, n){ fn(n) }
+
+16. Demonstrate a pure function and an impure function with examples. 
+Hint: Pure → depends only on inputs; Impure → changes external data.
+
+17. Make a function that accepts any number of arguments and returns their sum. 
+Hint: Use rest parameters (...nums) and loop or reduce.
+
+18. Create a function using destructured parameters. 
+Hint: Example — function show({name, age}) { console.log(name, age) }
+
+19. Write a function inside another that forms a scope chain example. 
+Hint: Access parent function’s variable from inside child function.
+
+20. Demonstrate function scope, block scope, and global scope with variables of same name. 
+Hint: Use var, let, and global variable to show which one is accessible.
