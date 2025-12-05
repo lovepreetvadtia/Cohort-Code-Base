@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+:root{
+    --x:200px;
+    --y:200px;
+}
+
+
+main{
+   height: 100%;
+  width: 100%;
+  background: url(https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.box{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(120px at var(--x) var(--y),rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.904));
+}
