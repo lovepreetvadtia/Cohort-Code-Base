@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+p{
+    font-size: 3rem;
+    color: rgba(189, 197, 189, 0.671);
+    font-weight: 400;
+    padding: 10px;
+    background-color: green;
+}
