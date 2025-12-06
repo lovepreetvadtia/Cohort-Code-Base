@@ -1,0 +1,78 @@
+/* Discrete Properties */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+@property --angleChange{
+    syntax:'<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes changeAngle {
+    from{
+        --angleChange: 0deg;
+    }
+    to{
+        --angleChange: 360deg;
+    }
+}
+
+.box{
+    display: flex;
+    border: 5px solid rgba(255, 255, 255, 0);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 10px;
+      height: 420px;
+      width: 350px;
+      color: white;
+      background-color: black;
+      transition: ease-out 1s;
+      border-radius: 20px;
+    }
+    
+    .box img{
+        /* width: 100%; */
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box h2{
+    text-align: start;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.box p{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.box:hover{
+    cursor: pointer;
+    box-shadow:0px 0px 40px rgb(221, 0, 221);
+    animation: changeAngle 5s;
+    animation-iteration-count: infinite;
+    background:linear-gradient(black) padding-box,
+    conic-gradient(from var(--angleChange),rgb(221, 0, 221),black,rgb(221, 0, 221)) border-box;
+    
+}
