@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(177, 169, 154, 0.863);
+    anchor-name: --anchorFnc;
+}
+
+
+
+
+
+/* Target Element */
+.anchor:hover{
+    anchor-name: --anchorFnc;
+}
+
+
+.anchor{
+    background-color: aquamarine;
+    display: flex;
+      align-items: center;
+      justify-content: center;
+    border-radius: 6px;
+    height: 40px;
+    width: 90px;
+    padding: 10px;
+    /* margin-inline: 10px; */
+}
+
+
+
+
+/* Positioned Element */
+.positioned{
+    background-color: white;
+    border-radius: 10px;
+    position: absolute; /* fist property we have to give*/
+    position-anchor: --anchorFnc;
+    top:anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    pointer-events: none;
+    transition: all 0.3s linear;
+    mix-blend-mode: difference;
+}

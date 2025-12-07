@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+body{
+    background-color: rgb(19, 19, 19);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-direction: column;
+      transition: all  0.3s linear;
+    }
+    
+.balls{
+    background-color: white;
+    width: 360px;
+    height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    transition: all  0.3s linear;
+gap: 25px;
+}
+
+.ball{
+    height: 70px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.balls:hover{
+    scale: 1.2 !important;
+}
+
+body:has(.balls:hover){
+    scale: 0.92;
+}
