@@ -21,8 +21,7 @@ Why is class considered a better option than writing similar objects again and a
 ---
 
 ## SECTION 3: Constructor and Initialization
-	7.	Create a class named BankAccount.
-Its constructor should accept accountHolderName and balance.
+	7.	Create a class named BankAccount. Its constructor should accept accountHolderName and balance.
 	8.	Inside the constructor, store both values using this.
 	9.	Add a method deposit(amount) that increases the balance.
 	10.	Create two bank accounts and deposit money into only one.
