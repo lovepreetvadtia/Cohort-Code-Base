@@ -238,9 +238,23 @@ showBrand.call(brnd2)
 //If we have various objects in our code but they are not in any fucntion then can call them with the help of call  method which is run through fucntion
 
 function introduce(city,role){
-    console.log(this.name,' ',this.city,' ',this.role)
+    console.log(property.name,city,role)
 }
 
-let property={
-    
+let property= {name:'Lovepreet'}
+
+introduce.apply(this.name,['Jaipur','Dev'])
+
+
+// apply is working same as call but there are some few differnces which is apply take arguments in a array and if we have a object then first off all call that object then pass arguments.
+
+
+// Section-8 
+
+function greet(){
+    console.log('Welcome',this.name)
 }
+
+let newGreet = greet.bind({name:'lovepreet'})
+
+newGreet()
