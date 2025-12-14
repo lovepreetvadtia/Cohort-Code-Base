@@ -1,20 +1,10 @@
-// function dukhanPeJa(adress,fn){
-//     console.log('Address Do')
-// fn('le bsdk khale')
-// }
-
-// dukhanPeJa({dukanNo:'133'},function(ice){
-//     console.log(ice)
-// })
-
-
-// Exsercise-1 
-function afterDelay(fn){
-    setTimeout(() => {
-        fn();
-    }, 2000);
+function dukhanPeJa(adress,fn){
+    console.log('Address Do')
+fn('le bsdk khale')
 }
 
-afterDelay(function(){
-    console.log('Callback Executed')
+dukhanPeJa({dukanNo:'133'},function(ice){
+    console.log(ice)
 })
+
+
