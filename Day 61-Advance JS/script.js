@@ -1,17 +1,26 @@
-let prm = new Promise((res,rjt)=>{
-    let num = Math.floor(Math.random()*10)
+//  Exercise 1 — Easy (Promise basics)
 
-    setTimeout(() => {
-    if(num<5){
-        res()
-    }    
-    else {rjt()}
-    }, 3000);
+let checkNumber = new Promise((res,rjct)=>{
+    let num= Math.floor(Math.random()*10)
+if(num%2===0){
+    res(num)
+}
+else{
+   rjct(num)
+}
 })
 
-prm.then(result=>{
-    console.log('Resolved')
+checkNumber
+.then(even=>{
+    console.log(even, ' is Even')
 })
-.catch(result=>{
-    console.log('Rejected')
+.catch(odd=>{
+ console.log(odd,' is odd')
 })
+
+
+// Exercise- 2
+
+function delayedMassage(massage){
+    
+}
