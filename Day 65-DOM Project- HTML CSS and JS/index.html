@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"/>
 </head>
 <body>
     <main>
@@ -30,7 +32,7 @@
                     <h3>20°C</h3>
                     <p>Light rain</p>
                 </div>
-                <div class="down">
+                <div class="lower">
                     <p>Precipitation: 35%</p>
                     <p>Humidity: 49%</p>
                     <p>Wind: 10Km/h</p>
@@ -58,7 +60,21 @@
         <div class="tools">
 
         <div class="todoList tool">
-            <h2>Todo List</h2>
+            <button class="close">Close</button>
+            <div class="up">
+                <h2>Todo List</h2>
+                <div class="task">
+                    <input type="text" placeholder="Add your new todo">
+                    <i class="ri-add-box-fill"></i>
+                </div>
+
+                <div class="strip"><p>Buy a new gaming laptop</p>
+                <span><i class="ri-delete-bin-7-fill"></i></span></div>
+            </div>
+            <div class="down">
+                <p>You have 2 pending tasks</p>
+                <button>Clear All</button>
+            </div>
         </div>
         <div class="dailyPlanner tool">
             <h2>Daily Planner</h2>

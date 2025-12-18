@@ -1,0 +1,138 @@
+:root{
+    --pri:#F3F3F3;
+    --sec:#2a2a2a;
+    --tri:#6e6e6e;
+    --fri:#E5E5E5;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(./assets/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: font1;
+  color: var(--sec);
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+.container{        
+    height: 90%;
+    width: 70%;
+    background-color: var(--pri);
+    position: relative;
+
+    nav{
+        padding-top: 20px;
+        padding-inline: 24px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left{
+            display: flex;
+            gap:20px;
+            .logo{
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            }
+            .links{
+            @include flex();
+            // justify-content: space-around;
+            gap: 18px;
+            font-size: 13px
+                }
+            }
+            .right{
+            @include flex();
+            font-size: 13px;
+            p{
+                text-decoration: underline;
+            } 
+            }
+        }
+
+    .mid{
+        padding-left: 20px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        .top{
+            padding-top: 60px;
+            padding-left: 90px;
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            .top1{
+                display: flex;
+                gap: 20px;
+                .projects{
+                    h3{
+                        font-weight: 300;
+                        font-size: 30px;
+                    }
+                    p{
+                        padding-top: 3px;
+                        font-size: 12px;
+                        text-align: right;
+                        color: var(--tri);
+                    }
+                }
+            }
+            .top2{
+                position: relative;
+                h3{
+                    font-size: 150px;
+                    font-weight: 300;
+                }
+                p{
+                    position: absolute;
+                    bottom:0px;
+                    font-size: 12px;
+                    color: var(--sec);
+                }
+            }
+        }
+        .bottom{
+            font-size: 12px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding-left: 80px;
+        }
+    }    
+    .mainImg{
+        object-position: center;
+        object-fit: cover;
+        // height: 600px;
+        width: 58%;
+        position: absolute;
+        bottom : 0px;
+        right: 0px;
+
+    }
+    }
+}
