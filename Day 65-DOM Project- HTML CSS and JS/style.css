@@ -1,7 +1,7 @@
 :root {
-  --pri:#EAE0CF;
-  --sec:#213448;
-  --tri:#94B4C1;
+  --pri:#E1D0B3;
+  --sec:#502b2b;
+  --tri:#9BB4C0;
 }
 
 @font-face {
@@ -33,7 +33,7 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 15px;
@@ -42,9 +42,10 @@ main {
 main .theme {
   margin-top: 20px;
   height: 60px;
-  width: 100%;
-  border-radius: 6px;
+  width: 97%;
   padding-inline: 10px;
+  border-radius: 6px;
+  margin-inline: 10px;
   background: rgba(255, 255, 255, 0.411);
   display: flex;
   justify-content: space-between;
@@ -64,7 +65,6 @@ main .theme .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-inline: 10px;
   background-color: var(--sec);
 }
 main .theme .button button {
@@ -133,6 +133,7 @@ main .allElem {
   justify-content: space-around;
   gap: 30px;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 main .allElem .card {
   transition: all linear 0.1s;
@@ -189,12 +190,69 @@ main .tools .tool {
   background-color: var(--tri);
   border: 3px solid var(--pri);
   border-radius: 7px;
-  padding: 10px;
-  position: relative;
+  padding-top: 15px;
+  padding-inline: 15px;
+  position: absolute;
+  top: 0;
   transition: all linear 0.2s;
 }
+main .tools .tool .pomodoroTimer {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main .tools .tool .pomodoroTimer .down {
+  gap: 15px;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .tools .tool .pomodoroTimer .down .buttons button {
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid var(--sec);
+  color: var(--sec);
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+main .tools .tool .pomodoroTimer .down .buttons button:hover {
+  background-color: var(--sec);
+  color: var(--pri);
+  font-weight: 600;
+  cursor: pointer;
+}
+main .tools .tool .pomodoroTimer .down h3 {
+  font-size: 120px;
+  color: var(--sec);
+}
+main .tools .tool .pomodoroTimer .down .downbuttons button {
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid var(--sec);
+  color: var(--sec);
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+main .tools .tool .pomodoroTimer .down .downbuttons button i {
+  font-weight: 600;
+  color: var(--sec);
+}
+main .tools .tool .pomodoroTimer .down .downbuttons button:hover {
+  background-color: var(--sec);
+  color: var(--pri);
+  font-weight: 600;
+  cursor: pointer;
+}
+main .tools .tool .pomodoroTimer .down .downbuttons button:hover i {
+  color: var(--pri);
+}
 main .tools .tool h2 {
-  font-size: 25px;
+  font-size: 45px;
   color: var(--sec);
 }
 main .tools .tool .close {
@@ -202,14 +260,17 @@ main .tools .tool .close {
   border-radius: 7px;
   font-size: 15px;
   position: absolute;
+  top: 20px;
+  right: 20px;
   color: var(--pri);
   border: none;
   background-color: var(--sec);
-  font-weight: 500;
+  font-weight: 600;
   right: 10px;
 }
-main .tools .todoList {
-  visibility: hidden;
+main .tools .tool .todoList {
+  height: 98%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -218,14 +279,14 @@ main .tools .todoList {
   z-index: 10;
   top: 0;
 }
-main .tools .todoList .up .task {
+main .tools .tool .todoList .up .task {
   margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
 }
-main .tools .todoList .up .task input {
+main .tools .tool .todoList .up .task input {
   border: 1px solid var(--sec);
   background-color: var(--pri);
   padding: 7px 7px;
@@ -233,11 +294,11 @@ main .tools .todoList .up .task input {
   font-size: 16px;
   outline: none;
 }
-main .tools .todoList .up .task i {
+main .tools .tool .todoList .up .task i {
   color: var(--sec);
   font-size: 35px;
 }
-main .tools .todoList .up .strip {
+main .tools .tool .todoList .up .strip {
   margin-top: 10px;
   height: 40px;
   border-radius: 5px;
@@ -247,46 +308,30 @@ main .tools .todoList .up .strip {
   align-items: center;
   padding-inline: 10px;
 }
-main .tools .todoList .up .strip p {
+main .tools .tool .todoList .up .strip p {
   -moz-columns: var(--pri);
        columns: var(--pri);
   font-size: 18px;
 }
-main .tools .todoList .up .strip i {
+main .tools .tool .todoList .up .strip i {
   font-size: 18px;
 }
-main .tools .todoList .down {
+main .tools .tool .todoList .down {
   display: flex;
   padding-inline: 10px;
   justify-content: space-between;
   align-items: center;
 }
-main .tools .todoList .down p {
+main .tools .tool .todoList .down p {
   font-size: 18px;
   color: var(--sec);
 }
-main .tools .todoList .down button {
+main .tools .tool .todoList .down button {
   color: var(--pri);
   border: none;
   background-color: var(--sec);
   padding: 10px 16px;
   border-radius: 5px;
-}
-main .tools .dailyPlanner {
-  position: absolute;
-  display: none;
-}
-main .tools .motivation {
-  position: absolute;
-  display: none;
-}
-main .tools .pomodoroTimer {
-  position: absolute;
-  display: none;
-}
-main .tools .dailyGoals {
-  display: none;
-  position: absolute;
 }
 
 .button:hover {
@@ -304,4 +349,9 @@ main .tools .dailyGoals {
 
 .close:hover {
   cursor: pointer;
+}
+
+.close:active {
+  scale: 0.95;
+  transition: all linear 0.5;
 }/*# sourceMappingURL=style.css.map */

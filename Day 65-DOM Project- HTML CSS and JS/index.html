@@ -40,55 +40,81 @@
             </div>
         </div>
         <div class="allElem">
-            <div class="card elem1">
+            <div id="0" class="card elem1">
                 <p>To Do List
                 </p>
             </div>
-            <div class="card elem2">
+            <div id="1" class="card elem2">
                 <p>Daily Planner</p>
             </div>
-            <div class="card elem3">
+            <div id="2" class="card elem3">
                 <p>Motivation</p>
             </div>
-            <div class="card elem4">
+            <div id="3" class="card elem4">
                 <p>Pomodoro Timer</p>
             </div>
-            <div class="card elem5">
+            <div id="4" class="card elem5">
                 <p>Daily Goals</p>
             </div>
         </div>
         <div class="tools">
-
-        <div class="todoList tool">
-            <button class="close">Close</button>
-            <div class="up">
-                <h2>Todo List</h2>
-                <div class="task">
+            <div class="tool">
+                <div class="todoList">
+                    <button id="0" class="close">Close</button>
+                    <div class="up">
+                    <h2>Your Personlised Task List</h2>
+                    <div class="task">
                     <input type="text" placeholder="Add your new todo">
                     <i class="ri-add-box-fill"></i>
+                    </div>
+                    <div class="strip"><p>Buy a new gaming laptop</p>
+                    <span><i class="ri-delete-bin-7-fill"></i></span></div>
+                    </div>
+                    <div class="down">
+                    <p>You have 2 pending tasks</p>
+                    <button>Clear All</button>
+                    </div>
+                </div>       
+            </div>
+            <div class="tool">
+                <div class="dailyPlanner">
+                    <h2>Daily Planner</h2>
+                    <button id="1" class="close">Close</button>
                 </div>
-
-                <div class="strip"><p>Buy a new gaming laptop</p>
-                <span><i class="ri-delete-bin-7-fill"></i></span></div>
             </div>
-            <div class="down">
-                <p>You have 2 pending tasks</p>
-                <button>Clear All</button>
+            <div class="tool">
+                <div  class="motivation">
+                    <h2>Motivation</h2>
+                    <button id="2" class="close">Close</button>
+                </div>
+            </div>
+            <div class="tool">
+                <div class="pomodoroTimer">
+                    <div class="up">
+                        <button id="3" class="close">Close</button>
+                        <h2>Pomodoro Timer - Increase The Productivity</h2>
+                    </div>
+                    <div class="down">
+                        <div class="buttons">
+                            <button>Short Break</button>
+                            <button>Focus</button>
+                            <button>Long Break</button>
+                        </div>
+                        <h3>25:00</h3>
+                        <div class="downbuttons">
+                            <button>Start</button>
+                            <button><i class="ri-restart-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tool">
+                <div  class="dailyGoals">
+                    <h2>Daily Goals</h2>
+                    <button id="4" class="close">Close</button>
+                </div>
             </div>
         </div>
-        <div class="dailyPlanner tool">
-            <h2>Daily Planner</h2>
-        </div>
-        <div class="motivation tool">
-            <h2>Motivation</h2>
-        </div>
-        <div class="pomodoroTimer tool">
-            <h2>Pomodora Timer</h2>
-        </div>
-        <div class="dailyGoals tool">
-            <h2>Daily Goals</h2>
-        </div>
-    </div>
     </main>
     <script src="script.js"></script>
 </body>

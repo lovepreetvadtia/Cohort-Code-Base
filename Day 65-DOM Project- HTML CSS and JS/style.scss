@@ -1,7 +1,7 @@
 :root{
-  --pri:#EAE0CF;
-  --sec:#213448;
-  --tri:#94B4C1;
+  --pri:#E1D0B3;
+  --sec:#502b2b;
+  --tri:#9BB4C0;
 }
 @font-face {
   font-family: regular;
@@ -11,6 +11,16 @@
 @font-face {
   font-family: bold;
   src: url(./fonnts.com-Aeonik-Bold.ttf);
+}
+
+@mixin button{
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid var(--sec);
+    color: var(--sec);
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
 @mixin flex{
@@ -43,7 +53,7 @@ main{
   height: 100%;
   width: 100%;  
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 15px;
@@ -51,9 +61,10 @@ position: relative;
   .theme{ 
     margin-top: 20px;
     height: 60px;
-    width: 100%;
-    border-radius: 6px;
+    width: 97%;
     padding-inline: 10px;
+    border-radius: 6px;
+    margin-inline: 10px;
     background: rgba(255, 255, 255, 0.411);
     display: flex;
     justify-content: space-between;
@@ -71,7 +82,7 @@ position: relative;
     height:35px;
     width: 140px;
     @include flex();
-    padding-inline: 10px;
+    // padding-inline: 10px;
     background-color: var(--sec);
 
   button{
@@ -153,6 +164,7 @@ position: relative;
   justify-content: space-around;
   gap: 30px;
   margin-top: 5px;
+  flex-wrap: wrap;
 
   .card{
     transition: all linear 0.1s;
@@ -162,6 +174,7 @@ position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: right;
+
   p{
     pointer-events: none;
     font-size: 20px;
@@ -206,34 +219,84 @@ position: relative;
   gap: 10px;
   
   .tool{
+    .pomodoroTimer{
+      display: block;
+      width: 100%;
+      height: 100%;
+      .down{
+        gap: 15px;
+        width: 100%;
+        height: 80%;
+        @include flex();
+        flex-direction: column;
+        .buttons{
+          button{
+            @include button();
+          }
+          button:hover{
+            background-color: var(--sec);
+            color: var(--pri);
+            font-weight: 600;
+            cursor: pointer;
+          }
+        }
+        h3{
+          font-size: 120px;
+          color: var(--sec);
+        }
+        .downbuttons{
+          button{
+            @include button();
+            i{
+              font-weight: 600;
+              color:var(--sec)
+            }
+          }
+          button:hover{
+            background-color: var(--sec);
+            color: var(--pri);
+            font-weight: 600;
+            cursor: pointer;
+          }
+          button:hover i{
+            color: var(--pri);
+          }
+
+        }
+      }
+    }
+
     display: none;
     height: 100%;
     width: 100%;
     background-color: var(--tri);
     border: 3px solid var(--pri);
     border-radius: 7px;
-    padding: 10px;
-    position: relative;
+    padding-top:15px;
+    padding-inline: 15px;
+    position: absolute;
+    top: 0;
     transition: all linear 0.2s;
     h2{
-      font-size: 25px;
+      font-size: 45px;
       color: var(--sec);
     }
     .close{
-      // display: none;
       padding: 10px 16px;
       border-radius: 7px;
       font-size: 15px;
       position: absolute;
+      top: 20px;
+      right: 20px;
       color: var(--pri);
       border: none;
       background-color: var(--sec);
-      font-weight: 500;
+      font-weight: 600;
       right: 10px;
     }
-  }
-  .todoList{
-    visibility: hidden;
+    .todoList{
+    height: 98%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -241,13 +304,13 @@ position: relative;
     position: absolute;
     z-index: 10;
     top: 0;
-
+    
     .up{
       .task{
         margin-top: 15px;
         @include flex();
         justify-content: flex-start;
-
+        
         
         input{
           border: 1px solid var(--sec);
@@ -279,7 +342,7 @@ position: relative;
           font-size:18px;
         }
       }
-
+      
     }
     .down{
       display: flex;
@@ -297,30 +360,12 @@ position: relative;
         background-color:var(--sec) ;
         padding: 10px 16px;
         border-radius: 5px;
-      }
     }
-
-}
-.dailyPlanner{
-  position: absolute;
-  display: none;
-}
-
-.motivation{
-  position: absolute;
-  display: none;
-}
-.pomodoroTimer{
-  position: absolute;
-  display: none;
-}
-.dailyGoals{
-  display: none;
-  position: absolute;
+  } 
 }
 
 }
-
+}
 }
 
 .button:hover{
@@ -336,4 +381,8 @@ transition: all linear 0.1s;}
 
 .close:hover{
   cursor: pointer;
+}
+.close:active{
+  scale: 0.95;
+  transition: all linear 0.5;
 }
