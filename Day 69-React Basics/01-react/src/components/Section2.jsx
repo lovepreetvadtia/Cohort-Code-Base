@@ -30,6 +30,10 @@ const cards = [
    h3: "Step5",
     h4: "Track Your Progress",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+  },{
+   h3: "Step6",
+    h4: "Get Istant Support",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   }
 ];
 

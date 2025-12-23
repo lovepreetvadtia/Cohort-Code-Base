@@ -86,14 +86,13 @@ html,body {
         }
     }
     section{
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         padding: 12px;
-        gap: 70px;
+        // gap: 50px;
         background-color: var(--sec);
     .section1{
         position: relative;
@@ -192,7 +191,9 @@ html,body {
         }
      }
      .section2{
+        padding-top: 40px;
         width: 92%;
+        height: 100vh;
         padding-top:20px ;
         .top{
             display: flex;
@@ -293,8 +294,10 @@ html,body {
    }
 
    .section3{
-    // padding-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     width: 95%;
+    height: 100vh;
     gap: 30px;
     display: flex;
     justify-content: center;
@@ -321,7 +324,7 @@ html,body {
         .down{
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 40px;
             div .list{
                 
                 .top{
@@ -347,7 +350,6 @@ html,body {
      }
     }
     .right{
-        width: auto;
         .up{
             h3{
                 font-size: 40px;
@@ -359,15 +361,17 @@ html,body {
             display: flex;
             gap: 16px;
             .img1{
-                height: 180px;
+                height: 240px;
                 width: 230px;
                 object-fit: cover;
                 object-position: top;
                 border-radius: 16px;
             }
             .img2{
+                object-fit: cover;
+                object-position: center;
                 border-radius: 16px;
-                height:400px ;    
+                height:460px ;    
                 width:420px ;    
             }
         }

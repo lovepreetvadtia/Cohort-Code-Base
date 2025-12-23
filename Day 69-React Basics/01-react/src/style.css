@@ -82,14 +82,12 @@ html, body {
   font-weight: 600;
 }
 #root .parent section {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 12px;
-  gap: 70px;
   background-color: var(--sec);
 }
 #root .parent section .section1 {
@@ -182,7 +180,9 @@ html, body {
   font-weight: 400;
 }
 #root .parent section .section2 {
+  padding-top: 40px;
   width: 92%;
+  height: 100vh;
   padding-top: 20px;
 }
 #root .parent section .section2 .top {
@@ -279,7 +279,10 @@ html, body {
   color: var(--pri);
 }
 #root .parent section .section3 {
+  padding-top: 40px;
+  padding-bottom: 40px;
   width: 95%;
+  height: 100vh;
   gap: 30px;
   display: flex;
   justify-content: center;
@@ -307,7 +310,7 @@ html, body {
 #root .parent section .section3 .left .down {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 #root .parent section .section3 .left .down div .list .top {
   padding-bottom: 10px;
@@ -328,9 +331,6 @@ html, body {
   font-size: 13px;
   color: var(--tri);
 }
-#root .parent section .section3 .right {
-  width: auto;
-}
 #root .parent section .section3 .right .up h3 {
   font-size: 40px;
   color: var(--tri);
@@ -341,7 +341,7 @@ html, body {
   gap: 16px;
 }
 #root .parent section .section3 .right .down .img1 {
-  height: 180px;
+  height: 240px;
   width: 230px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -350,7 +350,11 @@ html, body {
   border-radius: 16px;
 }
 #root .parent section .section3 .right .down .img2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 16px;
-  height: 400px;
+  height: 460px;
   width: 420px;
 }/*# sourceMappingURL=style.css.map */
