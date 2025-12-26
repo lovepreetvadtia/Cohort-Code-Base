@@ -9,7 +9,7 @@ import React from 'react'
 
 const Nav = () => {
   return (
-   <nav className='h-20 w-full flex justify-between pt-8 pb-10'>
+   <nav className='h-20 w-full h-screen flex justify-between p-20'>
     <div className="right text-amber-50 text-[24px] ">
         <h2>DVSY</h2>
     </div>
