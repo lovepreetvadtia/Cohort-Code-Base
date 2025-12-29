@@ -1,28 +1,26 @@
 import React, { useState } from 'react'
+import Washroom from './components/washroom'
 
 const App = () => {
-const [marks, setmarks] = useState([32,31,44,55,60])
+  const [Gender, setGender] = useState("Male")
 
-function giveGrace(){
-  let newMarks = marks.map((elem)=>{
-    if(elem+5<=100){
-      return elem+5
+  const changeGender = ()=>{
+    if(Gender=='Male'){
+      setGender("Female")
+    }
+    else if(Gender=="Female"){
+      setGender("Other")
     }
     else{
-     return elem
+      setGender("Male")
     }
-  })
-  setmarks(newMarks)
-}
-
+  }
   return (
     <>
-    {marks.map((elem,idx)=>{
-      return <h1 key={idx}>{elem}({elem>=33?"Pass":"Fail"})</h1>
-    })}
-    <button onClick={giveGrace} >Give Grace</button>
+    <h1>{Gender}</h1>
+    <button onClick={changeGender}>Change Gender</button>
+    <Washroom name={Gender} />
     </>
-
   )
 }
 

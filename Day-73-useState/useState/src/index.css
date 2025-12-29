@@ -10,3 +10,21 @@ html,body {
   background-color: #dadada;
 }
 
+.wash{
+  height: 200px;
+  width: 200px;
+  margin-top: 10px;
+  border: 2px solid black;
+}
+
+.Male{
+  background: blue;
+}
+
+.Female{
+  background: red;
+}
+
+.Other{
+  background: linear-gradien(voilet,red,blue,black);
+}
