@@ -6,19 +6,20 @@ const App = () => {
   const [Profile, setProfile] = useState('')
   const [Email, setEmail] = useState('')
   const [Number, setNumber] = useState('')
-
-  const localData = JSON.parse(localStorage.getItem('card')) || []
+  
+  const localData = JSON.parse(localStorage.getItem('all-user')) || []
 
   const [AllUser, setAllUser] = useState(localData)
 
   const formHandler =(e)=>{
     e.preventDefault()
-    let newArry = [...AllUser]
+    const newArry = [...AllUser]
     newArry.push({Username,Email,Number,Profile})
+
     setAllUser(newArry)
-    localStorage.setItem('card',JSON.stringify(newArry))
-    // setAllUser([...AllUser,{Username,Email,Number,Profile}])
-    console.log(AllUser)
+    localStorage.setItem('all-user',JSON.stringify(newArry))
+    
+    
 
     setUsername('')
     setEmail('')
@@ -29,10 +30,19 @@ const App = () => {
 
   const deleteHandler =(idx)=>{
     let newArry =[...AllUser]
-    newArry.splice(idx,1)
-    setAllUser(newArry)
-    localStorage.setItem('card',JSON.stringify(newArry))
 
+    let conf =confirm("Are you wanna delete")
+
+    if(conf){
+      newArry.splice(idx,1)
+      alert('Contact Deleted')
+    }
+    else{
+      alert('Contact Not Deleted')
+    }
+
+    setAllUser(newArry)
+    localStorage.setItem('all-user',JSON.stringify(newArry))
   }
 
   return (
@@ -41,7 +51,7 @@ const App = () => {
     <form className='bg-[#2B2738] flex flex-col px-5 py-5 text-amber-50 w-full h-fit gap-4 rounded-xl' onSubmit={(e)=>{
       formHandler(e)
     }}>
-      <h2 className='text-2xl font-bold text-[#dadada]'>Create User</h2>
+      <h2 className='text-2xl font-bold text-amber-100'>Create User</h2>
       <input
       className='bg-[#4f4963] px-4 py-2 rounded-md outline-0'
       value={Username}
