@@ -1,6 +1,9 @@
+
+const dotenv= require('dotenv')
+const mongoose = require('mongoose')
+
 const  ConnectToDB= ()=>{
-    const mongoose = require('mongoose')
-    mongoose.connect('mongodb+srv://lovepreetvadtia_db_user:BpXfOUgzJvq4vkdh@cohort2cluster.ho5c73j.mongodb.net/')
+    mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
     })
     console.log('Connected To DB')
