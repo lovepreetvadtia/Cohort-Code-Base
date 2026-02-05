@@ -35,7 +35,7 @@ axios.post('https://full-stack-deploy-7109.onrender.com/api/notes',{
 }
 
 function deleteeHandler(noteId){
-  axios.delete('https://full-stack-deploy-7109.onrender.com/api/notes/'+noteId)
+  axios.delete('https://full-stack-deploy-7109.onrender.com/api/notes'+noteId)
  .then(res=>{
    fetchNotes()
  }
