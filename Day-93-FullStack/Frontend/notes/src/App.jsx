@@ -8,7 +8,7 @@ const [titleInput, settitleInput] = useState('')
 const [descInput, setDesc] = useState('')
 
 function fetchNotes(){
-  axios.get('http://localhost:3000/api/notes')
+  axios.get('https://full-stack-deploy-7109.onrender.com/api/notes')
     .then(res=>{
       setNotes(res.data.Note)
     })
@@ -25,7 +25,7 @@ setDesc('')
 settitleInput('')
 
 const {title,description}= e.target.elements
-axios.post('http://localhost:3000/api/notes',{
+axios.post('https://full-stack-deploy-7109.onrender.com/api/notes',{
   title:title.value,
   description:description.value
 }).then(res=>{
@@ -35,7 +35,7 @@ axios.post('http://localhost:3000/api/notes',{
 }
 
 function deleteeHandler(noteId){
-  axios.delete('http://localhost:3000/api/notes/'+noteId)
+  axios.delete('https://full-stack-deploy-7109.onrender.com/api/notes/'+noteId)
  .then(res=>{
    fetchNotes()
  }
@@ -43,7 +43,7 @@ function deleteeHandler(noteId){
 }
 
 function updateHandler(noteId,field,value){
-  axios.patch(`http://localhost:3000/api/notes/${noteId}`,{
+  axios.patch(`https://full-stack-deploy-7109.onrender.com/${noteId}`,{
     [field]:value
   })
   .then(()=>{
