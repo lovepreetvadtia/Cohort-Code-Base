@@ -4,7 +4,7 @@ const authRouter = express.Router()
 const jwt  = require('jsonwebtoken')
 const cookie = require('cookie-parser')
 const env = require("dotenv")
-const crypto = require('crypto')
+const bcrypt = require('bcryptjs')
 
 // api/auth/register
 
@@ -25,7 +25,7 @@ authRouter.post('/register',async (req,res)=>{
             messege:"Username Already Exist"
     })}
     
-    const hash = crypto.createHash('md5').update(password).digest('hex')
+    const hash =await bcrypt.hash(password,10)
 
     const user =await userModel.create({
         email,username,password:hash
@@ -55,7 +55,7 @@ authRouter.post('/login', async(req,res)=>{
             messege:"Mail Not Registered"
         })}
     
-    const passMatch = user.password===crypto.createHash('md5').update(password).digest('hex')
+    const passMatch = await bcrypt.compare(password,user.password)
 
     if(!passMatch){
         return res.status(401).json({
