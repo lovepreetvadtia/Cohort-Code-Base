@@ -35,7 +35,7 @@ async function registerController(req,res){
         username:user.username
     })}
 
-// Register
+// Login
 
 async function loginController(req,res){
     const {email,username,password} = req.body
