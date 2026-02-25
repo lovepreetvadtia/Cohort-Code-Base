@@ -36,7 +36,7 @@ async function createPostController(req,res){
 
     const file = await imagekit.files.upload({
   file: await toFile(Buffer.from(req.file.buffer), 'file'),
-  fileName: 'fileName',
+  fileName: 'file',
   folder:"Insta-Clone"
 })
 
