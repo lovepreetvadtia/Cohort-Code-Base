@@ -32,8 +32,38 @@ res.status(201).json({
 }
 
 async function getPostsController(req,res) {
-    const posts = await postModel.findOne()
+
+
+  const userId = req.user.id
+
+
+  const posts = await postModel.find({user:userId})
+
+  console.log(userId,posts)
+
+  res.status(200).json({
+    message:"Post Fetched Sucessfully",
+    posts
+  })
 }
 
 
-module.exports= {CreatePostController,getPostsController}
+async function getPostDetailsController(req,res){
+  const postid = req.params.id
+
+  const post = await postModel.findById(postid)
+
+  console.log(post)
+
+  if(!post){
+    return res.status(404).json({
+      message:"Post Not Found"
+    })}
+
+  res.status(200).json({
+    message:"Post Fetched Sucessfully",post
+  })
+}
+
+
+module.exports= {CreatePostController,getPostsController,getPostDetailsController}
