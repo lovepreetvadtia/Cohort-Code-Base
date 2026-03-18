@@ -9,15 +9,11 @@ import axios from 'axios'
 
 const Login = () => {
 
-const [indentifier, Setindentifier]= useState('')
+const [identifier, Setidentifier]= useState('')
 const [password, SetPassword]= useState('')
 
 function submitHandler(e){
   e.preventDefault()
-  axios.post('http://localhost:3000/api/auth/login',{email:indentifier,username:indentifier,password},{withCredentials:true})
-  .then(res=>{
-    console.log(res.data) 
-  })
 }
 
   return (
@@ -25,8 +21,8 @@ function submitHandler(e){
       <form onSubmit={submitHandler} >
         <h2>Login</h2>
         <input type="text" name='user' placeholder='Enter Email Or Username' 
-        value={indentifier} onInput={e=>{
-          Setindentifier(e.target.value)
+        value={identifier} onInput={e=>{
+          Setidentifier(e.target.value)
         }} 
         />
         <input type="text" name='password' placeholder='Enter Password' 
