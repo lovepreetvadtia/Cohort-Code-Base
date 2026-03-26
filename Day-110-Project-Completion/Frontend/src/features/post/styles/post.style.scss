@@ -1,0 +1,82 @@
+.posts{
+    height: 100vh;
+    width: 300px;
+    // background-color: burlywood;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    .post{
+        // position: absolute;
+        height: 320px;
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(161, 161, 161);
+        .upper{
+            padding-inline: 5px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+            .imgWrapper{
+                img{
+                    border-radius: 50%;
+                }
+            }
+            p{
+                font-size: 18px;
+                color: black;
+                font-weight: 600;
+            }
+        }
+        .middle{
+            img{
+                height: 200px;
+                width: 200px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            padding: 6px;
+            width: 100%;
+            .up{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-inline: 12px;
+                button{
+                    text-decoration: none;
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                    height: 20px;
+                    width: 20px;
+                }
+                .left{
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+            .down{
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                color: black;
+                padding-left:10px;
+            }
+        }
+    }
+}
+
+.like{
+    color: red;
+}

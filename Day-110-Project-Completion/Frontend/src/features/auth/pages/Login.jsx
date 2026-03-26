@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {useAuth} from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
+import '../styles/auth.style.scss'
 
 
 
