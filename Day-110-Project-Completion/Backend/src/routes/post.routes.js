@@ -12,4 +12,5 @@ postRouter.get('/posts',indentifyUser,controllers.getPostsController)
 postRouter.get('/post/:id',indentifyUser,controllers.getPostDetailsController)
 postRouter.get('/all-posts',indentifyUser,controllers.getAllPost)
 
+
 module.exports = postRouter

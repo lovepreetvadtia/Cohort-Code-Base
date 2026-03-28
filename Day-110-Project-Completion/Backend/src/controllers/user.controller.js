@@ -92,11 +92,10 @@ async function likeController(req,res) {
 
     const likeRecord = await likeModel.create({
         post:post,
-        user:user,
-        post
+        user:user
     })
 
-    res.status(200).json({
+    return res.status(200).json({
         message:"Post Liked Successfully",post
     })
 

@@ -1,0 +1,18 @@
+.nav-Container{
+    margin-top: 1rem;
+    width: 100%;
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .button{
+        background-color: #bd0c23;
+        color: whitesmoke;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

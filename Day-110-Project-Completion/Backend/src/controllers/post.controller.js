@@ -21,7 +21,7 @@ console.log(file)
 
 const post = await postModel.create({
     caption:req.body.caption,
-    ImgUrl:file.url,
+    imgUrl:file.url,
     user:req.user._id
 })
 
@@ -68,7 +68,7 @@ async function getPostDetailsController(req,res){
 
 async function getAllPost(req,res){
   const user = req.user
-const posts =await  Promise.all((await postModel.find().populate('user').lean())
+const posts =await  Promise.all(((await postModel.find().populate('user').lean()).reverse())
 .map(async (post)=>{
   const isLiked = await likeModel.findOne({
     user:user._id,
