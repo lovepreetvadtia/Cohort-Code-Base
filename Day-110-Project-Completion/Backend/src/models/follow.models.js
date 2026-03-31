@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import { mongoose } from "mongoose"
 
 
 const followSchema = new mongoose.Schema({
@@ -11,6 +11,4 @@ const followSchema = new mongoose.Schema({
 },{timestamps:true}) 
 
 
-const followModel = mongoose.model('follows',followSchema)
-
-module.exports = followModel
+export const followModel = mongoose.model('follows',followSchema)

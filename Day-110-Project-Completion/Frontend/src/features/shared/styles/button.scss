@@ -1,10 +1,18 @@
 .nav-Container{
-    margin-top: 1rem;
-    width: 100%;
+    // position: relative;
+    z-index: 10;
+    top: 0px;
+    position: sticky;
+    padding: 10px 0px 10px 0px;
+    width: 100vw;
+    background-color: rgba(150, 131, 131, 0.753);
     nav{
         width: 100%;
         display: flex;
         justify-content: space-around;
+        h2{
+            cursor: pointer;
+        }
     }
     .button{
         background-color: #bd0c23;

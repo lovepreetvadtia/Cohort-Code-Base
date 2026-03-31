@@ -1,22 +1,23 @@
-const jwt = require('jsonwebtoken')
-const imagekit = require('@imagekit/nodejs')
-const {toFile} = require('@imagekit/nodejs');
-const postModel = require('../models/post.models');
-const likeModel = require('../models/like.model')
-const ImageKit = new imagekit({
-  privateKey: process.env['IMAGEKIT_PRIVATE_KEY']});
+import dotenv from "dotenv";
+dotenv.config();
+import ImageKit from '@imagekit/nodejs';
+import { toFile } from "@imagekit/nodejs"
+import { postModel } from "../models/post.models.js"
+import { likeModel } from "../models/like.model.js"
+
+const client = new ImageKit({
+  privateKey: process.env['IMAGEKIT_PRIVATE_KEY']
+});
 
 
-async function CreatePostController(req,res) {
+export async function CreatePostController(req,res) {
 
-const file  =  await ImageKit.files.upload({
+const file  =  await client.files.upload({
   file: await toFile(Buffer.from(Buffer.from(req.file.buffer)), 'file'),
   fileName: 'fileName',
   folder:"Insta-Clone",
   user:req.user._id
 });
-
-console.log(file)
 
 
 const post = await postModel.create({
@@ -32,7 +33,7 @@ res.status(201).json({
 })
 }
 
-async function getPostsController(req,res) {
+export async function getPostsController(req,res) {
 
 
   const userId = req.user.id
@@ -49,7 +50,7 @@ async function getPostsController(req,res) {
 }
 
 
-async function getPostDetailsController(req,res){
+export async function getPostDetailsController(req,res){
   const postid = req.params.id
 
   const post = await postModel.findById(postid)
@@ -66,7 +67,7 @@ async function getPostDetailsController(req,res){
   })
 }
 
-async function getAllPost(req,res){
+export async function getAllPost(req,res){
   const user = req.user
 const posts =await  Promise.all(((await postModel.find().populate('user').lean()).reverse())
 .map(async (post)=>{
@@ -87,5 +88,3 @@ const posts =await  Promise.all(((await postModel.find().populate('user').lean()
     posts
   })
 }
-
-module.exports= {CreatePostController,getPostsController,getPostDetailsController,getAllPost}

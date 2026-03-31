@@ -1,11 +1,9 @@
-const userModel  = require('../models/user.models')
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-const cookie= require('cookie-parser')
-const { hash } = require('crypto')
+import {userModel} from '../models/user.model.js'
+import bcrypt from 'bcryptjs'
+import jwt  from 'jsonwebtoken'
 
 // POST :- api/auth/register
-async function registerController(req,res) {
+export async function registerController(req,res) {
     const {email,username,password,bio,profileImg} = req.body
 
     if(!email){
@@ -39,7 +37,6 @@ async function registerController(req,res) {
         email,username,profileImg,bio,password:hash
     })
 
-
     // Generate JWT Token  
     const token  = jwt.sign({
         id:user._id
@@ -58,7 +55,7 @@ async function registerController(req,res) {
     }
 
 // POST :- api/auth/login
-async function loginController(req,res) {
+export async function loginController(req,res) {
     const {email,username,password}= req.body
 
     const user= await userModel.findOne({
@@ -95,7 +92,7 @@ async function loginController(req,res) {
 }
 
 // GET :- api/auth/get-me
-async function getmeController(req,res) {
+export async function getmeController(req,res) {
     const userId = req.user.id
 
     const user  = await userModel.findById(userId)
@@ -110,5 +107,4 @@ async function getmeController(req,res) {
     })
 }
 
-module.exports = {registerController,loginController,getmeController}
 

@@ -1,25 +1,25 @@
-require('dotenv').config()
-const express = require('express')
-const app = express()
-const cookie = require('cookie-parser')
-const cors = require('cors')
+import dotenv from 'dotenv'
+dotenv.config()
 
+import express from 'express'
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
+
+// Routers
+import { authRouter } from './routes/auth.routes.js'
+import { postRouter } from './routes/post.routes.js'
+import { userRouter } from './routes/user.routes.js'
+
+export const app = express()
 
 app.use(express.json())
-app.use(cookie())
+app.use(cookieParser())
 app.use(cors({
-    credentials:true,
-    origin:"http://localhost:5173"
+    credentials: true,
+    origin: "http://localhost:5173"
 }))
 
-// Require Routers
-const authRouter = require('./routes/auth.routes')
-const postRouter = require('./routes/post.routes')
-const userRouter = require('./routes/user.routes')
-
-// Use Routers
-app.use('/api/auth/',authRouter)
-app.use('/api/',postRouter)
-app.use('/api/',userRouter)
-
-module.exports = app
+// Routes
+app.use('/api/auth', authRouter)
+app.use('/api', postRouter)
+app.use('/api', userRouter)

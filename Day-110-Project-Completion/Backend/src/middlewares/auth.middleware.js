@@ -1,36 +1,36 @@
-const userModel = require("../models/user.models")
-const jwt  = require('jsonwebtoken')
+import { userModel } from "../models/user.model.js";
+import jwt from "jsonwebtoken";
 
-async function indentifyUser(req,res,next) {
+export async function identifyUser(req, res, next) {
 
+  const token = req.cookies.token;   
 
-    // Checking Token Valid or not
-    const token = req.cookies.token
+  if (!token) {
+    return res.status(401).json({
+      message: "User Not Authorised",
+    });
+  }
 
-    if(!token){
-        return res.status(409).json({
-            message:"User Not Authorised"
-        })}
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
+    const user = await userModel
+      .findById(decoded.id)
+      .select("-password");
 
-    let  decoded
-    let  user
+    if (!user) {
+      return res.status(404).json({
+        message: "User not found"
+      });
+    }
 
-    // Checking User Authorised or Not
-    try {
-        decoded = jwt.verify(token,process.env.JWT_SECRET)
-        user  = await userModel.findById(decoded.id).select('-password')
-    } catch (error) {
-        if(error){
-            return res.status(409).json({
-                message:"Invalid Token",
-                error
-            })}}
+    req.user = user;
+    next();
 
-    req.user = user
-
-
-    next()
+  } catch (error) {
+    return res.status(401).json({
+      message: "Invalid Token",
+      error: error.message
+    });
+  }
 }
-
-module.exports = indentifyUser

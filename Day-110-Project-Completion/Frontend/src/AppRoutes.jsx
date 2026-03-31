@@ -3,6 +3,7 @@ import Login from "./features/auth/pages/Login.jsx";
 import Register from "./features/auth/pages/Register.jsx";
 import Feed from "./features/post/Feed.jsx";
 import CreatePost from "./features/post/components/CreatePost.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ export const routes = createBrowserRouter([
         path:"/register"
     },
     {
-        element: <Feed/>,
+        element: <HomePage/>,
         path:'/'
     },
     {

@@ -1,13 +1,10 @@
-const express = require('express')
-const controllers = require('../controllers/auth.controllers')
-const authRouter = express.Router()
-const indentifyUser = require('../middlewares/auth.middleware')
+import express from 'express'
+import {registerController,loginController,getmeController} from '../controllers/auth.controllers.js'
+import {identifyUser} from '../middlewares/auth.middleware.js'
+export const authRouter = express.Router()
 
 
 // POST :- api/auth/register
-authRouter.post('/register',controllers.registerController)
-authRouter.post('/login',controllers.loginController)
-authRouter.get('/get-me',indentifyUser,controllers.getmeController)
-
-
-module.exports = authRouter
+authRouter.post('/register',registerController)
+authRouter.post('/login',loginController)
+authRouter.get('/get-me',identifyUser,getmeController)

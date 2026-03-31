@@ -24,7 +24,6 @@ console.log(feed)
   return (
     <main>
       <div className="posts">
-      <Nav/>
         {feed?.map((post)=>{
           return(
             <Post 

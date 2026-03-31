@@ -1,12 +1,12 @@
-const followModel = require("../models/follow.model")
-const likeModel = require("../models/like.model")
-const userModel = require("../models/user.models")
+import {followModel} from '../models/follow.models.js'
+import {likeModel} from '../models/like.model.js'
+import {userModel} from "../models/user.model.js"
 
 
 
 // POST:- api/users/follow/:id
 
-async function followController(req,res) {
+export async function followController(req,res) {
 
     let follower
     let followee
@@ -48,7 +48,7 @@ async function followController(req,res) {
 
 // POST:- api/users/unfollow/:id
 
-async function unfollowController(req,res) {
+export async function unfollowController(req,res) {
     let follower = req.user.username
     let followee = req.params.id
 
@@ -73,7 +73,7 @@ async function unfollowController(req,res) {
 
 // POST:- api/users/like/:id
 
-async function likeController(req,res) {
+export async function likeController(req,res) {
 
     try {
     
@@ -110,7 +110,7 @@ async function likeController(req,res) {
 
 // POST: api/users/unlike/:id
 
-async function unlikeController(req,res) {
+export async function unlikeController(req,res) {
     
     const post = req.params.id
     const user = req.user
@@ -134,4 +134,12 @@ async function unlikeController(req,res) {
         message:"Post Unlike Sucessfully",post
       })}
 
-module.exports = {followController,unfollowController,likeController,unlikeController}
+
+export async function getFollows(req,res) {
+    const user = req.user._id
+    
+const follow = await followModel.findById(user).popullate()
+    res.status(200).json({
+        message:"followers fetched succesfully",follow,user
+    })    
+}

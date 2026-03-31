@@ -10,7 +10,9 @@ const Nav = () => {
   return (
     <main className='nav-Container'> 
       <nav>
-        <h2>MyIG</h2>
+        <h2 onClick={()=>{
+            navigate('/')
+        }}>MyIG</h2>
         <button
         onClick={()=>{
             navigate('/create-post')
