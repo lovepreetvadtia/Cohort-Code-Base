@@ -6,22 +6,33 @@
     // top: 40px;
     
     .followWrapper{
+        display: flex;
+        flex-direction: column;
     background-color: rgb(88, 88, 88);
     width: 33.33vw;
     height: 100vh;
     align-items:flex-start;
+    justify-content: start;
     position: sticky;
     .follower{  
         display: flex;
         flex-direction: column;
+        h1{
+            font-size: 20px;
+        }
         .wrapper{
         display: flex;
-        gap: 40px;
+        gap: 10px;
         justify-content: space-around;
+        padding: 5px;
         .left{
             img{
                 border-radius: 50%;
             }
+        }
+        .right{
+            display: flex;
+            gap: 10px;
         }
     }
     }

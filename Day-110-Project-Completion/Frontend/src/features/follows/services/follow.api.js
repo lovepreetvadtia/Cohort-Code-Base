@@ -5,6 +5,8 @@ const api = axios.create({
     withCredentials:true
 })
 
-async function GetFollows() {
-    const response = await api.get('/follows')
+export async function getFollows() {
+    const response = await api.get('/followers')
+    console.log(response.data)
+    return response.data
 }

@@ -136,10 +136,17 @@ export async function unlikeController(req,res) {
 
 
 export async function getFollows(req,res) {
-    const user = req.user._id
+    const user = req.user.username
     
-const follow = await followModel.findById(user).popullate()
+ const follow = await followModel.find({
+    follower: user
+  }).sort({createdAt:-1});
+
+  const following = follow.map(f=>{
+   return f.followee
+  })
     res.status(200).json({
-        message:"followers fetched succesfully",follow,user
+        followingCount:following.length,
+        following    
     })    
 }
