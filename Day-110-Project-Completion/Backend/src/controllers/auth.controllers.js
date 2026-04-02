@@ -43,7 +43,11 @@ export async function registerController(req,res) {
     },process.env.JWT_SECRET,{expiresIn:"1d"})
 
     //Store Token in cookies 
-    res.cookie("token",token)
+    res.cookie("token",token,{
+  httpOnly: true,
+  secure: true,
+  sameSite: "none"
+})
 
     res.status(201).json({
         message:"User Created Successfully",
