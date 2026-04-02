@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL:"https://full-stack-app-y3qs.onrender.com//api",
+    baseURL:"https://insta-clone-backend-q2fg.onrender.com/api",
     withCredentials:true
 })
 

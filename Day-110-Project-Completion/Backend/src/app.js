@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
     credentials: true,
-    origin: "https://full-stack-app-y3qs.onrender.com/"
+    origin: "https://insta-clone-backend-q2fg.onrender.com"
 }))
 
 // Routes
