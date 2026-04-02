@@ -10,5 +10,5 @@ export const postRouter = express.Router()
 postRouter.post('/post',upload.single('file'),identifyUser,CreatePostController)
 postRouter.get('/posts',identifyUser,getPostsController)
 postRouter.get('/post/:id',identifyUser,getPostDetailsController)
-postRouter.get('/all-posts',identifyUser,getAllPost)
+postRouter.get('/all-posts',getAllPost)
 

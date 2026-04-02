@@ -10,5 +10,5 @@ userRouter.post('/users/follow/:id',identifyUser,followController)
 userRouter.post('/users/unfollow/:id',identifyUser,unfollowController)
 userRouter.post('/users/like/:id',identifyUser,likeController)
 userRouter.post('/users/unlike/:id',identifyUser,unlikeController)
-userRouter.get('/followers',identifyUser,getFollows)
+userRouter.get('/followers',getFollows)
 
