@@ -3,6 +3,7 @@ import Post from './components/post'
 import './styles/post.style.scss'
 import { usePost } from './hooks/UsePost'
 import Nav from '../shared/components/Nav'
+import Login from '../auth/pages/Login'
 
 const Feed = () => {
 
@@ -26,6 +27,7 @@ console.log(feed)
       <div className="posts">
         {feed?.map((post)=>{
           return(
+            <>
             <Post 
             key={post._id}
             user= {post.user}
@@ -34,6 +36,7 @@ console.log(feed)
             HandleLike= {HandleLike}
             HandleUnLike ={HandleUnLike}
             />
+            </>
           )
         })
         }
