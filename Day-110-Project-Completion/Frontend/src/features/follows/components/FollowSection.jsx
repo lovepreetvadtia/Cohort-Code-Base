@@ -14,12 +14,13 @@ const FollowSection = () => {
     <div className='followWrapper'>
       <h1>Followers</h1>
       {loading && <p>Loading...</p>}
-      {followers.map((folwoo,index)=>{
-        return <Follow 
+      {followers?.map((folwoo,index)=>(
+         <Follow
+         key={index} 
         value= {index}
         followers = {folwoo}
         />
-})
+      ))
        }
     </div>
   )
