@@ -1,6 +1,7 @@
 import bcrypt from 'bcryptjs'
 import { userModel } from '../models/user.model.js'
 import jwt from 'jsonwebtoken'
+import { blackListModel } from '../models/blacklist.model.js'
 
 
 export async function registerController(req,res) {
@@ -51,7 +52,7 @@ export async function  loginController(req,res) {
         $or:[
         {email},
         {username}
-        ]})
+        ]}).select('+password')
     if(!user){
         res.status(409).json({
             message:"Invalid Credentials"
@@ -76,4 +77,29 @@ export async function  loginController(req,res) {
         email:user.email,
         profileImg:user.profileImg
     })  
+}
+
+export async function getMeController(req,res){
+    const user = await userModel.findById(req.user.id)
+    console.log(req.user.id)
+    // const user = await userModel.findById(req.user._id)
+
+    res.status(200).json({
+        message:"User Fetched Sucessfully",
+        user
+    })
+}
+
+export async function userLogOut(req,res){
+    const token = req.cookies.token
+
+    res.clearCookie('token')
+
+    const blackList = await blackListModel.create({
+        token
+    })
+
+    res.status(200).json({
+        message:"User Successfully LogOut"
+    })
 }
