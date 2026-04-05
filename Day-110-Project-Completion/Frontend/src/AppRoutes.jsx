@@ -3,6 +3,7 @@ import Login from "./features/auth/pages/Login.jsx";
 import Register from "./features/auth/pages/Register.jsx";
 import CreatePost from "./features/post/components/CreatePost.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -20,5 +21,9 @@ export const routes = createBrowserRouter([
     {
         element:<CreatePost/>,
         path:"/create-post"
+    },
+    {
+        element:<NotFound/>,
+        path:"*"
     }
 ])
