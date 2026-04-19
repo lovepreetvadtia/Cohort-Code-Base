@@ -8,6 +8,7 @@ import { redis } from '../config/cache.js'
 export async function registerController(req,res) {
    const {email,username,password,profileImg} = req.body
 
+   console.log(req.body)
 if(!email){
     return res.status(400).json({
         message:"Email Is Required"
