@@ -5,6 +5,7 @@ import { songModel } from "../models/song.model.js";
 export async function uploadSong(req,res) {
     const songBuffer = req.file.buffer
     const tags = id3.read(songBuffer)
+    const {mood} = req.body
     
 
     const [songFile,postFile]= await Promise.all([
@@ -24,11 +25,23 @@ export async function uploadSong(req,res) {
     const song = await songModel.create({
         songUrl:songFile.url,
         posterUrl:postFile.url,
-        title:tags.title
+        title:tags.title,
+        mood
     })
 
     res.status(201).json({
         message:'Song Created Successfully',
+        song
+    })
+}
+
+export async function getSong(req,res){
+    const {mood} = req.query
+
+    const song = await songModel.findOne({mood})
+
+    res.status(200).json({
+        message:"Song Fetched Successfully",
         song
     })
 }

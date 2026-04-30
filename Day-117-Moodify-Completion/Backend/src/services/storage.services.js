@@ -1,7 +1,7 @@
+import env from 'dotenv'
+env.config();
 import ImageKit from "@imagekit/nodejs";
 import { toFile } from "@imagekit/nodejs";
-import env from 'dotenv'
-
 
 const client = new ImageKit({
     privateKey:process.env.IMAGEKIT_PRIVATE_KEY
