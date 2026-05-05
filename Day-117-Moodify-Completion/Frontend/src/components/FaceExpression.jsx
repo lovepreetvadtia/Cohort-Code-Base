@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { detect, init } from "./utils/utils";
-
+import { useSong } from "../features/player/hooks/useSong";
 
 export default function FaceExpression({ onClick = () => { } }) {
+    const {handleSong} =useSong()
+
     const videoRef = useRef(null);
     const landmarkerRef = useRef(null);
     const streamRef = useRef(null);
@@ -27,8 +29,8 @@ export default function FaceExpression({ onClick = () => { } }) {
 
     async function handleClick() {
         const expression = detect({ landmarkerRef, videoRef, setExpression })
-        console.log(expression)
         onClick(expression)
+        console.log(expression)
     }
 
 
@@ -40,7 +42,7 @@ export default function FaceExpression({ onClick = () => { } }) {
                 playsInline
             />
             <h2>{expression}</h2>
-            <button onClick={handleClick} >Detect expression</button>
+            <button className="button" onClick={handleClick}>Detect expression</button>
         </div>
     );
 }

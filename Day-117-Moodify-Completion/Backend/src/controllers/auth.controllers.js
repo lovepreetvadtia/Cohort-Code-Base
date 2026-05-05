@@ -8,7 +8,7 @@ import { redis } from '../config/cache.js'
 export async function registerController(req,res) {
    const {email,username,password,profileImg} = req.body
 
-   console.log(req.body)
+//    console.log(req.body) 
 if(!email){
     return res.status(400).json({
         message:"Email Is Required"
@@ -83,7 +83,7 @@ export async function  loginController(req,res) {
 
 export async function getMeController(req,res){
     const user = await userModel.findById(req.user.id)
-    console.log(req.user.id)
+    // console.log(req.user.id)
     // const user = await userModel.findById(req.user._id)
 
     res.status(200).json({
